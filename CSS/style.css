@@ -2,6 +2,73 @@
   display: none;
 }
 
-body {
+form,
+#quote,
+#greeting,
+#clock,
+#todo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#clock h1 {
+  font-size: 120px;
+  margin-top: 180px;
+}
+
+form h1,
+form h2,
+li,
+li button,
+#weather,
+#clock,
+#quote,
+#greeting {
+  color: white;
+}
+
+form input {
+  background: inherit;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid white;
+  padding-bottom: 5px;
+  color: white;
+  font-size: 20px;
+}
+
+form input::placeholder {
+  color: white;
+}
+
+li button {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 35%;
+  margin-left: 10px;
+}
+
+#weather {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  font-size: 12px;
+}
+
+#quote {
+}
+
+#quote span:last-child {
+  font-size: 12px;
+  margin-top: 10px;
 }
