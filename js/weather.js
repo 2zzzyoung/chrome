@@ -8,11 +8,12 @@ function onGeoSuccess(position) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      //   console.log(data.name, data.weather[0].main);
+      const temp = parseInt(data.main.temp);
+      String(data.main.temp).slice(0, 1);
       const weather = document.querySelector("#weather span:first-child");
       const city = document.querySelector("#weather span:last-child");
       city.innerText = data.name;
-      weather.innerText = `${data.weather[0].main} ${data.main.temp}℃`;
+      weather.innerText = `${data.weather[0].main} \u00a0\u00a0${temp}℃`;
     });
 }
 

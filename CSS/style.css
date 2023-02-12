@@ -1,5 +1,5 @@
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 form,
@@ -10,6 +10,22 @@ form,
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#todo-list {
+  width: 400px;
+  height: 100px;
+  overflow-y: auto;
+  margin: 0 auto;
+}
+
+#login-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  width: 100%;
 }
 
 img {
@@ -35,6 +51,13 @@ li button,
 #quote,
 #greeting {
   color: white;
+}
+
+#quote {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
 }
 
 form input {
@@ -72,6 +95,7 @@ li button {
 #quote span {
   display: flex;
   justify-content: center;
+  text-align: center;
   align-items: center;
 }
 
